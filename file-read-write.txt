@@ -1,0 +1,30 @@
+file = open("textFile.txt","r") 
+
+fileDate = open("date.txt","w") 
+fileTime = open("time.txt","w") 
+fileAzimutal = open("azimutal.txt","w") 
+fileAltitude = open("altitude.txt","w") 
+
+data = file.readlines()
+
+for index, line in enumerate(data):
+  if (index != 0):
+    words = line.split(",");
+    fileDate.write(words[0] + "\n");
+    fileTime.write(words[1] + "\n");
+    fileAzimutal.write(words[4] + "\n");
+    fileAltitude.write(words[46] + "\n");    
+    print(words)
+    print("-----Number of words: " , len(words))
+
+
+
+# for s in data.splitlines():
+#   s = s.strip()
+#   print(s.split(","))
+  
+file.close()
+fileDate.close()
+fileTime.close()
+fileAzimutal.close()
+fileAltitude.close()
