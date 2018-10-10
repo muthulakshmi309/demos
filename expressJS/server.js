@@ -1,20 +1,10 @@
 var express = require("express"),
     bodyParser = require("body-parser"),
     path = require('path'),
-    mysql = require('mysql'),
-    app = express();
+    app = express(),
+    service = require('./rest-api-services');
 
 const port = process.env.PORT || 4000;
-
-// Connect to mySQL database
-global.createDbConn = function createMySqlConnection() {
-    return mysql.createConnection({
-        host: '192.168.1.30',
-        user: 'dbadmin',
-        password: 'ca1490c58c',
-        database: 'keplercms_debug'
-    });
-}
 
 // Absolute path
 // app.use('/static', express.static(path.join(__dirname, 'public')))
@@ -46,38 +36,10 @@ app.get("/first", (req, res) => {
     res.send(`first page is loaded`);
 });
 
-// Load static files
-
-
 // RESTful API - select table
-app.get("/getVendor", (req, res) => {
-    var conn = global.createDbConn();
-    conn.connect();
-    conn.query('SELECT * FROM tblvendor', function (err, rows, fields) {
-        conn.end();
-
-        if (err) {
-            res.status(403).send(err);
-        } else {
-            res.status(200).json(rows);
-        }
-    })
-});
-
+app.get("/getVendor", service.getVendor);
 // RESTful API - call a Stored procedure
-app.get("/getScenario/:batchName", (req, res) => {
-    var conn = global.createDbConn();
-    conn.connect();
-    conn.query('call uspSelectScenarioForBuildVersionName("' + req.params.batchName + '")', function (err, rows, fields) {
-        conn.end();
-
-        if (err) {
-            res.status(403).send(err);
-        } else {
-            res.status(200).json(rows);
-        }
-    })
-});
+app.get("/getScenario/:batchName", service.getScenario);
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
