@@ -1,7 +1,23 @@
 <html>
-    <body>
-        <h1> Welcome to Express JS</h1>
-        <button>Fetch Data</button>
-        <button>Save Data</button>      
-    </body>
+
+<body>
+    <h1> Welcome to Express JS</h1>
+    <button onclick="getVendor();">Fetch Data</button>
+    
+<br/><br/>
+    <div id="data"></div>
+    <script>
+        function getVendor() {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("data").innerText = "Vendor Data: <br/>" + xhr.responseText;
+                }
+            }
+            xhr.open("GET", "http://192.168.5.6:4000/getVendor", true);
+            xhr.send(null);
+        }
+    </script>
+</body>
+
 </html>
