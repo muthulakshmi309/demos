@@ -2,19 +2,21 @@
 
 <body>
     <h1> Welcome to Express JS</h1>
-    <button onclick="getVendor();">Fetch Data</button>
+    <button onclick="getData('http://192.168.5.6:4000/getVendor');">Fetch Vendor</button>
+    <button onclick="getData('http://192.168.5.6:4000/getScenario/batch_4');">Fetch Scenario</button>
     
 <br/><br/>
     <div id="data"></div>
     <script>
-        function getVendor() {
-            var xhr = new XMLHttpRequest();
+        function getData(url) {
+            var xhr = new XMLHttpRequest(), elem = document.getElementById("data");
+            elem.innerText = "Fetching...";
             xhr.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("data").innerText = "Vendor Data: <br/>" + xhr.responseText;
+                    elem.innerText = "Data: " + xhr.responseText;
                 }
             }
-            xhr.open("GET", "http://192.168.5.6:4000/getVendor", true);
+            xhr.open("GET", url, true);
             xhr.send(null);
         }
     </script>
