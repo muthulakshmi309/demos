@@ -16,12 +16,15 @@ global.createDbConn = function createMySqlConnection() {
     });
 }
 
-app.set('view engine', 'html');
+// Absolute path
+// app.use('/static', express.static(path.join(__dirname, 'public')))
+app.use('/static', express.static('public'));
 
 //Here we are configuring express to use body-parser as middle-ware.
 app.use(bodyParser.urlencoded({
     extended: false
 }));
+
 app.use(bodyParser.json());
 
 app.use(function (err, req, res, next) {
@@ -42,6 +45,9 @@ app.get("/first", (req, res) => {
     console.log(res);
     res.send(`first page is loaded`);
 });
+
+// Load static files
+
 
 // RESTful API - select table
 app.get("/getVendor", (req, res) => {

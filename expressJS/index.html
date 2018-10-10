@@ -1,15 +1,19 @@
 <html>
 
 <body>
-    <h1> Welcome to Express JS</h1>
+    <h3 style="text-align: center"> Welcome to Express JS</h3>   
+    <br/>
+    <div>Fetching static files</div>
+    <img src="/static/express.jpg" height="400">
+    <br/><br/>
     <button onclick="getData('http://192.168.5.6:4000/getVendor');">Fetch Vendor</button>
     <button onclick="getData('http://192.168.5.6:4000/getScenario/batch_4');">Fetch Scenario</button>
-    
-<br/><br/>
+    <br/><br/>
     <div id="data"></div>
     <script>
         function getData(url) {
-            var xhr = new XMLHttpRequest(), elem = document.getElementById("data");
+            var xhr = new XMLHttpRequest(),
+                elem = document.getElementById("data");
             elem.innerText = "Fetching...";
             xhr.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
