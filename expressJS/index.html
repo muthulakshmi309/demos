@@ -18,6 +18,8 @@
             xhr.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     elem.innerText = "Data: " + xhr.responseText;
+                } else if(this.readyState == 4 && this.status !== 200) {
+                    elem.innerText = "Error: " + xhr.responseText;
                 }
             }
             xhr.open("GET", url, true);
