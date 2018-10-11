@@ -17,9 +17,12 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());
 
+//An error handling middleware
 app.use(function (err, req, res, next) {
-    console.log("There is some error...");
+    res.status(500);
+    res.send("Oops, something went wrong...")
 });
+
 app.get("/", (req, res) => res.redirect('/index'));
 
 app.get("/index", (req, res) => {
