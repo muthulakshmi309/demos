@@ -1,0 +1,11 @@
+npm adduser (use the email of desktop credentials otherwise will give EAUTHIP error)
+
+npm whoami (the username will be displayed)
+
+npm publish (will give error if the module name is already published (E403 error code))
+
+If published successfully then u can test at https://npmjs.com/package/<package>
+
+Once published, then it can be installed anywhere through npm install <package>
+
+(reference : https://docs.npmjs.com/getting-started/publishing-npm-packages)
