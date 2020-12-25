@@ -1,0 +1,19 @@
+h3 {
+    text-align: center;
+}
+
+.content {
+    padding: 10px;
+}
+.loader {
+    width: 500px;
+    height: 10px;
+    background-color: #e2dddd;
+    margin-bottom: 20px;
+}
+
+.loader > div {
+    background-color: #1fa9a9;    
+    height: 100%;
+    width:0;
+}
