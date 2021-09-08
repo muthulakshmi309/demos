@@ -1,0 +1,111 @@
+[{
+        "from": "abc.gmail.com",
+        "username": "ABC",
+        "subject": "Hello",
+        "message": "This is a test mail",
+        "recieved": "05/10/2021"
+    },
+    {
+        "from": "xyz.gmail.com",
+        "subject": "Hello",
+        "message": "This is a test mail",
+        "recieved": "05/10/2021"
+    },
+    {
+        "from": "pqr.gmail.com",
+        "username": "PQR",
+        "subject": "Hello",
+        "message": "This is a test mail",
+        "recieved": "05/10/2021"
+    },
+    {
+        "from": "abc.gmail.com",
+        "username": "ABC",
+        "subject": "Hello",
+        "message": "This is a test mail",
+        "recieved": "05/10/2021"
+    },
+    {
+        "from": "abc.gmail.com",
+        "username": "ABC",
+        "subject": "Hello",
+        "message": "This is a test mail",
+        "recieved": "05/10/2021"
+    },
+    {
+        "from": "abc.gmail.com",
+        "username": "ABC",
+        "subject": "Hello",
+        "message": "This is a test mail",
+        "recieved": "05/10/2021"
+    },
+    {
+        "from": "abc.gmail.com",
+        "username": "ABC",
+        "subject": "Hello",
+        "message": "This is a test mail",
+        "recieved": "05/10/2021"
+    },
+    {
+        "from": "abc.gmail.com",
+        "username": "ABC",
+        "subject": "Hello",
+        "message": "This is a test mail",
+        "recieved": "05/10/2021"
+    },
+    {
+        "from": "abc.gmail.com",
+        "username": "ABC",
+        "subject": "Hello",
+        "message": "This is a test mail",
+        "recieved": "05/10/2021"
+    },
+    {
+        "from": "xyz.gmail.com",
+        "subject": "Hello",
+        "message": "This is a test mail",
+        "recieved": "05/10/2021"
+    },
+    {
+        "from": "abc.gmail.com",
+        "username": "XYZ",
+        "subject": "Hello",
+        "message": "This is a test mail",
+        "recieved": "05/10/2021"
+    },
+    {
+        "from": "abc.gmail.com",
+        "username": "ABC",
+        "subject": "Hello",
+        "message": "This is a test mail",
+        "recieved": "05/10/2021"
+    },
+    {
+        "from": "abc.gmail.com",
+        "username": "ABC",
+        "subject": "Hello",
+        "message": "This is a test mail",
+        "recieved": "05/10/2021"
+    },
+    {
+        "from": "abc.gmail.com",
+        "username": "ABC",
+        "subject": "Hello",
+        "message": "This is a test mail",
+        "recieved": "05/10/2021"
+    },
+    {
+        "from": "abc.gmail.com",
+        "username": "ABC",
+        "subject": "Hello",
+        "message": "This is a test mail",
+        "recieved": "05/10/2021"
+    },
+    {
+        "from": "abc.gmail.com",
+        "username": "ABC",
+        "subject": "Hello",
+        "message": "This is a test mail",
+        "recieved": "05/10/2021"
+    }
+]

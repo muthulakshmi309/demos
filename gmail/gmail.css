@@ -1,0 +1,172 @@
+/*use CSS variables */
+
+:root {
+    --color-table-row: rgba(242, 245, 245, 0.8);
+    --color-text: #000;
+    --color-text-table: #202124;
+    --color-border-table-row: rgb(128, 128, 128);
+    --color-background: rgba(242, 245, 245, 0.8);
+    --color-tab-background: #fff;
+}
+
+.dark {
+    --color-table-row: rgba(0, 0, 0, 0.8);
+    --color-text: #fff;
+    --color-text-table: #fff;
+    --color-background: rgba(0, 0, 0, 0.8);
+    --color-border-table-row: rgb(128, 128, 128);
+    --color-tab-background: #000;
+}
+
+body {
+    color: var(--color-text);
+    background: var(--color-background);
+}
+
+.app {
+    display: flex;
+    /* align-items: center; */
+    height: 100%;
+}
+
+.left-container {
+    min-width: 5%;
+    /* height: 100%; */
+    /* align-items: stretch; */
+}
+
+.left-container ul {
+    list-style: none;
+    padding: 0 10px;
+}
+
+.left-container ul li {
+    padding: 10px 0;
+}
+
+.right-container {
+    flex-grow: 1;
+}
+
+.tab {
+    display: flex;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+.tab-list {
+    list-style: none;
+    padding: 10px;
+    min-width: 200px;
+}
+
+.tab-list:hover {
+    background-color: rgba(32, 33, 36, 0.059);
+    cursor: pointer;
+}
+
+.mail-list {
+    width: 100%;
+}
+
+.mail-list td {
+    padding: 0 10px;
+}
+
+.mail-list .mail {
+    background-color: var(--color-table-row);
+    color: var(--color-text-table);
+    border-bottom: 1px solid var(--color-border-table-row);
+    padding: 10px 5px;
+    display: flex;
+}
+
+.mail-list .mail td:nth-child(3) {
+    min-width: 100px;
+}
+
+.mail-list .mail td:nth-child(4) {
+    flex-grow: 1;
+}
+
+.mail .email-from,
+.mail .subject,
+.mail .date {
+    /* min-height: 50px; */
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mail-list .mail:hover {
+    cursor: pointer;
+    box-shadow: inset 1px 0 0 #dadce0, inset -1px 0 0 #dadce0, 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+}
+
+.top-container {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    margin: 20px;
+}
+
+.top-container h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.tab-container {
+    width: 100%;
+    border-bottom: 1px solid #000;
+    background-color: var(--color-tab-background);
+}
+
+.tab-active {
+    color: #d93025;
+    border-bottom: 3px solid #d93025;
+}
+
+.search-container {
+    height: 100%;
+    flex-grow: 1;
+    padding: 0 20px;
+}
+
+.search-input {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    outline: 0;
+    padding: 0 20px;
+    max-width: 720px;
+}
+
+.bi {
+    cursor: pointer;
+    padding: 0 10px
+}
+
+.bi:before {
+    font-size: 30px;
+}
+
+.mail .bi {
+    padding: 0;
+}
+
+.tab .bi:before {
+    font-size: 22px;
+}
+
+.bi-square:before,
+.bi-check-square-fill:before,
+.bi-star:before,
+.bi-star-fill:before {
+    font-size: 18px;
+}
+
+.bi-star-fill {
+    color: red;
+}
